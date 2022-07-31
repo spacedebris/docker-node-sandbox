@@ -1,5 +1,8 @@
 version: '3'
 services:
+  nginx:
+    ports:
+      - "3000:80"
   node-app:
     build:
       context: .
@@ -12,9 +15,12 @@ services:
       - NODE_ENV=development
       - MONGO_USER=spacedebris
       - MONGO_PASSWORD=spacedebris
+      - SESSION_SECRET=secret
     command: npm run dev
   mongo:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=spacedebris
       - MONGO_INITDB_ROOT_PASSWORD=spacedebris
+
+
 
