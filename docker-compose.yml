@@ -13,12 +13,7 @@ services:
     depends_on:
       - mongo
   mongo:
-    image: mongo
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=spacedebris
-      - MONGO_INITDB_ROOT_PASSWORD=spacedebris
-    volumes:
-      - mongo-db:/data/db
+    image: mongo:4.4.15
   redis:
     image: redis
 volumes:
