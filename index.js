@@ -56,7 +56,7 @@ app.use(session({
 app.use(express.json());
 
 app.get("/api/v1", (req, res) => {
-    res.send("<h3>Do it good ?!</h3><h4> listening on port " + port);
+    res.send("<h3>Do it good ?! !!! Test watchtower</h3><h4> listening on port " + port);
     console.log('yeah it ran');
 });
 
